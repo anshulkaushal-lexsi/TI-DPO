@@ -1,0 +1,26 @@
+# TIDPO loss parameters
+name: tidpo
+use_tidpo: True
+beta: 0.2
+
+# TDPO-style base objective parameters (kept aligned with `loss=tdpo` for fair comparisons)
+alpha: 0.5
+if_tdpo2: true
+
+gamma: 0.001
+alpha_triplet: 0.001
+reference_free: false
+enable_gradient_attribution: True
+
+# Token-importance weighting (Eq.7)
+lambda_importance: 0.2
+prior_sigma_div: 8.0
+
+# Anchor sampling
+anchor_max_new_tokens: 64
+anchor_top_k: 50
+anchor_top_p: 0.95
+anchor_temperature: 0.8
+
+# Optional KL regularization (adds a position-wise KL(ref||policy) penalty)
+kl_coef: 0.0

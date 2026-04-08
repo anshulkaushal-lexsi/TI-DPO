@@ -1,0 +1,17 @@
+# TDPO loss parameters (TDPO-style objective with position-wise KL)
+name: tdpo
+beta: 0.1
+alpha: 0.5
+if_tdpo2: true
+reference_free: false
+
+# Optional: enable token-importance weighting + triplet (hybrid mode)
+# If false, uses vanilla TDPO.
+use_tidpo: false
+alpha_triplet: 0.0
+
+# Anchor sampling (only used if alpha_triplet > 0)
+anchor_max_new_tokens: 64
+anchor_top_k: 50
+anchor_top_p: 0.95
+anchor_temperature: 0.8

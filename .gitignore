@@ -1,0 +1,63 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual env / tools ---
+.venv/
+venv/
+ENV/
+env/
+.conda/
+
+# --- Packaging ---
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# --- Testing / linting ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Hydra / training outputs ---
+outputs/
+multirun/
+**/.hydra/
+
+# --- Model checkpoints / artifacts (common patterns) ---
+checkpoints/
+checkpoint*/
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# --- Data / caches (adjust if you want to version small samples) ---
+data/
+datasets/
+cache/
+.cach*/
+
+# --- Experiment trackers ---
+wandb/
+tensorboard/
+
+# --- Local env files ---
+.env
+.env.*

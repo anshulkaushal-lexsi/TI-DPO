@@ -1,0 +1,9 @@
+# Memory optimized config - keep gradient attribution
+# Minimum batch size to reduce memory usage
+# Disable sampling to reduce memory usage
+# Gradient accumulation steps
+# Reduce sequence length to save memory, but not exceed model max length
+max_length: 512  # Increased from 128 to 512, still less than GPT2's 1024 limit
+max_prompt_length: 256  # Increased from 64 to 256
+# Reduce number of eval samples
+# Enable activation checkpointing to save memory 

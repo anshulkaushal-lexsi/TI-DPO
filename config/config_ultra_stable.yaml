@@ -1,0 +1,48 @@
+
+seed: 0
+exp_name: ultra_stable
+
+
+batch_size: 1
+eval_batch_size: 1
+debug: false
+fsdp_port: null
+datasets: [hh]
+
+
+wandb:
+  enabled: false
+
+
+local_dirs: [.cache]
+local_run_dir: ${get_local_run_dir:${exp_name},${local_dirs}}
+
+
+lr: 1e-7  
+gradient_accumulation_steps: 8  
+max_grad_norm: 0.1 
+
+
+max_length: 64 
+max_prompt_length: 32
+
+
+n_epochs: 1
+n_examples: null
+n_eval_examples: 2
+trainer: BasicTrainer
+optimizer: AdamW
+warmup_steps: 100
+activation_checkpointing: false
+eval_every: 25
+minimum_log_interval_secs: 1.0
+
+
+sample_during_eval: false
+n_eval_model_samples: 1
+do_first_eval: false
+
+defaults:
+- _self_
+- model: gpt2_small
+- loss: tidpo 
